@@ -36,17 +36,17 @@ class ParticleScaler extends EditorWindow {
         if (GUILayout.Button("Scale", EditorStyles.miniButtonLeft)) {
             for (var gameObj: GameObject in Selection.gameObjects) {
 				if(this._autoRename){
-                            	var s = gameObj.name.Split("¤"[0]);
+                            	var s = gameObj.name.Split("陇"[0]);
                             	
                             	if(s.Length==1){
                             		
-                            		gameObj.name += " ¤" + _scaleMultiplier;
+                            		gameObj.name += " 陇" + _scaleMultiplier;
                             	}else{
                             //	Debug.Log(s[1]);
                 
                             	var i:float = float.Parse(s[s.Length-1]);
                             	
-                            	gameObj.name = s[0] +"¤" + _scaleMultiplier*i;
+                            	gameObj.name = s[0] +"陇" + _scaleMultiplier*i;
                             	}
                 	}
                 var pss: ParticleSystem[];
@@ -198,9 +198,9 @@ class ParticleScaler extends EditorWindow {
             var pss: ParticleSystemRenderer[];
             pss = gameObj.GetComponentsInChildren. < ParticleSystemRenderer > ();
             for (var ps: ParticleSystemRenderer in pss) {
-                ps.particleSystem.Stop();
+                ps.GetComponent.<ParticleSystem>().Stop();
                 ps.maxParticleSize = _maxParticleScale;
-                ps.particleSystem.Play();
+                ps.GetComponent.<ParticleSystem>().Play();
             }
         }
     }
