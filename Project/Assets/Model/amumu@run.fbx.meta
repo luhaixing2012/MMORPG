@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fd28258d8e526a041b9294ba88cde31d
+guid: f50ec3c8af3c22c4fb1fe567ab2d7e86
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -120,15 +120,31 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
+      keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: Speed
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 1.1606406
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 1.1606406
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
       events: []
       transformMask:
       - path: 
